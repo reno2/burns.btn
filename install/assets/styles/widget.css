@@ -1,0 +1,312 @@
+
+
+
+.burns-btn__wrap {
+    position: fixed;
+    left: 40px;
+    bottom: 40px;
+    z-index: 100;
+   transition: all 0.5s ease-out !important;
+}
+
+
+.burns-msg__wrap.open {
+    /*padding: 10px;
+    background: #eee;
+    width: 300px;*/
+    position: fixed;
+    
+    opacity: 1;
+    transform-origin: left bottom;
+    transform: translateX(24px) rotate(0deg);
+    transition: all 0.5s ease-out;
+}
+
+.burns-msg__wrap{
+   padding: 10px 40px 10px 10px;
+    background: #fbfbfb;
+    max-width: 380px;
+    position: fixed;
+    opacity: 0;
+    transition: all 0.5s ease-out !important;
+    min-height: 180px;
+    border-radius: 6px;
+    box-shadow: 0 15px 39px -16px #00000059;
+    display: flex;
+    bottom: 80px;
+    transform-origin: left bottom;
+    transform: translateX(24px) rotate(-163deg);
+}
+.msg-b__text {
+    text-transform: uppercase;
+    font-weight: 900;
+    text-align: center;
+}
+.msg-b__text .msg-b__text_one{
+    margin-bottom: 12px;
+    font-size: 15px;
+    display: block;
+    font-family: sans-serif;
+}
+.msg-b__text .msg-b__text_two{
+    font-size: 13px;
+    display: block;
+
+    font-family: sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.msg-b__link{
+    color:#FF6347;
+   text-align: center;
+    margin-top: 10px;
+    
+}
+.msg-b__link a{
+    font-family: sans-serif;
+    text-decoration: none;
+    padding: 8px 32px;
+    display: block;
+   border-radius: 4px;
+   font-size: 16px;
+}
+.burns-msg__body.msg-b {
+    display: flex;
+    align-items: center;
+}
+.burns-msg__body.msg-b__img {
+    background: url("/bitrix/images/burns.btn/promotion.png");
+    width: 94px;
+    height: 94px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 20px;
+}
+
+.burns-msg__close {
+    background-image: url("/bitrix/images/burns.btn/delete32.png");
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    z-index: 999;
+
+}
+
+
+
+/*button*/
+
+.burns-btn{
+    transition: width 500ms;
+    width: 48px;
+    height: 48px;
+    background-color: #FF6347;
+    margin-right: 16px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 24px;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,.24);
+    background-repeat: no-repeat;
+    background-position: 12px 12px;
+    vertical-align: top;
+    box-sizing: border-box;
+    padding-left: 48px;
+    line-height: 48px;
+    cursor: pointer;
+    background-image: url("/bitrix/images/burns.btn/cup2.png");
+/*    background-image: url("/bitrix/images/burns.btn/gift_24.png");*/
+    font-size: 16px;
+    color: #fff;
+    /*background-position: center center;*/
+}
+.burns-btn__body {
+    width: 200px;
+    overflow: hidden;
+    color: #fff;
+    display: inline-block;
+   /* vertical-align: middle;*/
+   font-family: sans-serif;
+    opacity: 0;
+}
+
+/*.burns-btn:hover .burns-btn__body{*/
+
+.burns-btn__body.hover{
+    opacity: 1;
+    transition: all 500ms ease-in-out 100ms;
+}
+/* .burns-btn:hover, .unipop__item_open { */
+
+.burns-btn.hover {
+    width: 248px;
+    overflow: visible;
+    transition: all 500ms ease-in-out 100ms;
+}
+.burns-btn__close{
+  background-image: url("/widget/delete32.png");
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  right: 11px;
+  top: 8px;
+  transition: all 0.5s ease-out;
+  transform: rotate(0deg);
+  border-radius: 100px;
+  display: none;
+}
+
+.burns-btn__close:hover{
+  transition: all 0.5s ease-out;
+  transform: rotate(180deg);
+}
+/**/
+
+@media (max-width: 450px){
+    .burns-msg__body.msg-b__left{
+        display: none;
+    }
+    .burns-msg__wrap.open{
+        width: 100%;
+        left:0;
+     transform: translateX(0px) rotate(0deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+/*darck theme*/
+.burns-btn__wrap.dark .burns-msg__wrap{
+    background: #0F5CBF;
+}
+.burns-btn__wrap.dark .msg-b__text{
+    color: #CEF2D0;
+}
+
+.burns-btn__wrap.dark .burns-btn{
+    background-color: #072B59;
+}
+.burns-btn__wrap.dark .msg-b__link a{
+    color: #fff;
+    background: #ff6345;
+    box-shadow: 0 3px 1px 0px #d65239;
+}
+/*darck theme*/
+
+
+/*green theme*/
+.burns-btn__wrap.green .burns-msg__wrap{
+    background: #0BD904;
+}
+.burns-btn__wrap.green .msg-b__text{
+    color: #CEF2D0;
+}
+
+.burns-btn__wrap.green .burns-btn{
+    background-color:#3CA69B;
+}
+.burns-btn__wrap.green .msg-b__link{
+    
+    background: #fab43a;
+    box-shadow: 0 3px 1px 0px #e4a638;
+}
+.burns-btn__wrap.green .msg-b__link a{
+    color: #fff;
+}
+/*green theme*/
+
+
+
+/*red theme*/
+.burns-btn__wrap.red .burns-msg__wrap{
+    background: #af323c;
+}
+.burns-btn__wrap.red .msg-b__text{
+    color: #CEF2D0;
+}
+
+.burns-btn__wrap.red .burns-btn{
+    background-color:#af323c;
+}
+.burns-btn__wrap.red .msg-b__link{
+    
+    background: #324d5b;
+    box-shadow: 0 3px 1px 0px #354852;
+}
+.burns-btn__wrap.red .msg-b__link a{
+    color: #fff;
+}
+/*red theme*/
+
+/*blagosloven theme*/
+.burns-btn__wrap.blagosloven .burns-msg__wrap{
+    background: #1fa73f;
+}
+.burns-btn__wrap.blagosloven .msg-b__text{
+    color: #CEF2D0;
+}
+.burns-btn__wrap.blagosloven .burns-btn{
+    background-color:#1fa73f;
+}
+.burns-btn__wrap.blagosloven .msg-b__link{
+    
+    background: #324d5b;
+    box-shadow: 0 3px 1px 0px #354852;
+}
+.burns-btn__wrap.blagosloven .msg-b__link a{
+    color: #fff;
+}
+/*blagosloven theme*/
+
+
+/*pravpost theme*/
+.burns-btn__wrap.pravpost .burns-msg__wrap{
+    background: #363d4e;
+}
+.burns-btn__wrap.pravpost .msg-b__text{
+    color: #CEF2D0;
+}
+.burns-btn__wrap.pravpost .burns-btn{
+    background-color:#363d4e;
+}
+.burns-btn__wrap.pravpost .msg-b__link{
+    
+    background: #47a447;
+    box-shadow: 0 3px 1px 0px #354852;
+}
+.burns-btn__wrap.pravpost .msg-b__link a{
+    color: #fff;
+}
+/*pravpost theme*/
+
+
+/*magnitik theme*/
+.burns-btn__wrap.magnitik .burns-msg__wrap{
+    background: #1775a9;
+}
+.burns-btn__wrap.magnitik .msg-b__text{
+    color: #CEF2D0;
+}
+.burns-btn__wrap.magnitik .burns-btn{
+    background-color:#1775a9;
+}
+.burns-btn__wrap.magnitik .msg-b__link{
+    
+    background: #333333;
+    box-shadow: 0 3px 1px 0px #262c2f;
+}
+.burns-btn__wrap.magnitik .msg-b__link a{
+    color: #fff;
+}
+/*magnitik theme*/
+
